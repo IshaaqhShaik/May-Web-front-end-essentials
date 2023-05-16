@@ -1,0 +1,11 @@
+Clone the repository on the local through your git account.
+Create a branch from the main branch.
+    git checkout -b name-day-1
+    using naming convention like 
+        name-day-1
+        ex: Ishaaqh-day-1
+    create a bio data file in the branch under the folder Day-1
+    commit you changes in the branch.
+    push the code changes by publishing the branch.
+    create a pr for the branch pr or merge request.
+
