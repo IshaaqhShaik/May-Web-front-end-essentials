@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(90deg, rgba(38,12,191,1) 0%, rgba(18,176,44,1) 100%);
+            font-family: monospace;;
+        }
+        legend {
+            background-color: #000;
+            color: #fff;
+            padding: 3px 6px;
+        }
+
+        .container{
+            max-width: 450px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color:rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            color: #fff;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .container p{
+            text-align: left;
+        }
+        .container input{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 450px;
+        }
+        .container button{
+            max-width: 450px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin:  15px 0;
+            color: white;
+            background-color: #000;
+            border: 0px;
+            border-radius: 5px;
+        }
+        .container .sub-section input{
+            width: 15px;
+            margin-right: 5px;
+        }
+        .container .sub-section{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .links{
+            color: #3f82c1;
+        }
+        
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h3>Sign in</h3>
+            <label>Sign in with you username and password</label>
+            <p>
+                USERNAME
+            </p>
+            <input type="text" placeholder="username">
+            <p>
+                PASSWORD
+            </p>
+            <input type="password=" placeholder="password"><br>
+            <div class="sub-section">
+                <div class="r-me">
+                    <input type="checkbox"><label>Remember me</label>
+                </div>
+                <a class="links" href="reset.html">Forgot Password?</a>
+            </div>
+            <button>Login</button>
+            <span> Not Yet a Member?</span><a class="links" href="register.html">Register here!</a>
+        </div>
+    </div>
+</body>
+</html>
