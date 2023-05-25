@@ -70,25 +70,59 @@
 <body>
     <div class="container">
         <div>
-            <h3>Sign in</h3>
-            <label>Sign in with you username and password</label>
-            <p>
-                USERNAME
-            </p>
-            <input type="text" placeholder="username">
-            <p>
-                PASSWORD
-            </p>
-            <input type="password=" placeholder="password"><br>
-            <div class="sub-section">
-                <div class="r-me">
-                    <input type="checkbox"><label>Remember me</label>
+            <!-- Loging form for user sign in -->
+            <form id="form" action="#" method="GET">
+                <h3>Sign in</h3>
+                <h5>Sign in with you username and password</h5>
+                <label for="username">
+                    USERNAME
+                </label>
+                <input id="username" type="text" placeholder="username" name="username">
+                <!-- this is para becaiuse -->
+                <p>
+                    PASSWORD
+                </p>
+                <input type="password" placeholder="password" name="password" id="password"><br>
+                <div class="sub-section">
+                    <div class="r-me">
+                        <input type="checkbox"><label>Remember me</label>
+                    </div>
+                    <a class="links" href="reset.html">Forgot Password?</a>
                 </div>
-                <a class="links" href="reset.html">Forgot Password?</a>
-            </div>
-            <button>Login</button>
-            <span> Not Yet a Member?</span><a class="links" href="register.html">Register here!</a>
+                <button id="submit">Login</button>
+                <span> Not Yet a Member?<a class="links" href="register.html">Register here!</a></span>
+            </form>
         </div>
     </div>
+
+    <script>
+        var button = document.getElementById("form");
+
+        button.addEventListener('submit', function(event){
+            event.preventDefault();
+            event.stopPropagation();
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            debugger;
+            alert("username :" + username);
+            alert("password :" + password);
+
+            localStorage.setItem(username, password)
+        })
+        
+        var input = document.getElementById("username");
+        input.addEventListener('change', function(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password");
+            var temp = localStorage.getItem(username);
+            var text = "autofill password";
+
+            if(temp){
+                if (confirm(text) == true) {
+                    password.value = temp;
+                }
+            }
+        })
+    </script>
 </body>
 </html>
