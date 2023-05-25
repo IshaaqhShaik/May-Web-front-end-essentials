@@ -1,0 +1,8 @@
+Day-4 class:
+
+Tables > Thead > Tbody> tr > td > th
+
+Lists
+    ul > li
+
+    ol > li
