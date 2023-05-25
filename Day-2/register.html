@@ -9,56 +9,67 @@
         body{
             position: relative;
             height: 100vh;
-            background: linear-gradient(90deg, rgba(38,12,191,1) 0%, rgba(18,176,44,1) 100%);
-        }
-        legend {
-            background-color: #000;
-            color: #fff;
-            padding: 3px 6px;
-        }
-
-        input {
-            margin: 0.4rem;
-        }
-        label{
-            margin: 0.4rem;
+            background: linear-gradient(90deg, rgb(94, 89, 95) 0%, rgba(248, 205, 120, 0.996) 100%);
+            font-family: monospace;
         }
         .container{
-            max-width: 350px;
+            max-width: 600px;            
             position: absolute;
             top: 50%;
             left: 50%;
+            color: white;
             transform: translate(-50%, -50%);
-            /* this is done by haseeb */
-
+            background-color: #054952;
+            border-radius: 15px;
+            padding: 10px;
         }
+        .container button{
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin:  15px 0;
+            color: white;
+            background-color: #40c332;
+            border: 0px;
+            border-radius: 5px;
+        }
+        .container input{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 450px;
+        }
+        
+        .links{
+            color: #7cb8f0;
+        }
+        
     </style>
 </head>
 <body>
     <div class="container">
-        <fieldset>
-            <legend>User Registration</legend>
+       <div>
+        <h3 style= text-align:center;>User Registration</h3>
             <label>
-                username:
+               USERNAME:
             </label>
             <input type="text" placeholder="username">
             <br>
             <label>
-                password:
+                PASSWORD:
             </label><input type="password=" placeholder="password">
             <br>
-            Cofirm password:
+            CONFIRM PASSWORD:
             </label><input type="password=" placeholder="password">
-            <br>
-            <label>
-                username:
-            </label><input type="text" placeholder="username">
             <br>
             <button>Register</button>
             <br>
+            <p>By creating an account you agree to our <a class="links" href="#">Terms & Privacy</a>.</p>
             <span> Already a Member?</span>
-            <a href="login.html">Login</a>
-        </fieldset>
+            <a class="links" href="login.html">Login</a>
+        </div>
     </div>
 </body>
 </html>
