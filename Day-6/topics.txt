@@ -1,0 +1,23 @@
+Day-6 
+        
+    Specificity.
+
+    Pseudo classes.
+        classes: https://www.w3schools.com/css/css_pseudo_classes.asp
+        elements: https://www.w3schools.com/css/css_pseudo_elements.asp
+
+        Assignment: Start with a small circle of 50px when we mouse over it ut should change to a button with 200pxX300px with text.
+
+    Positions
+        Relative
+        Absolute
+        Sticky
+        static
+
+        https://www.w3schools.com/css/css_positioning.asp
+
+    Z-index
+        https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
+
+    css calc
+        https://developer.mozilla.org/en-US/docs/Web/CSS/calc
