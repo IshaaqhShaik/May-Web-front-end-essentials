@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code pairing session</title>
+    <style>
+        body{
+            background: url('./2362680.jpg');
+            background-size: cover;
+            margin: 0px;
+            color: white;
+            font-family: system-ui;
+        }
+        body:after{
+            content: '';
+            top: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            background-color: rgba(0,0,0, 0.5);
+            z-index: -1;
+
+        }
+        header{
+            padding: 10px 180px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid white;
+        }
+        #brand-logo{
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        #header-options{
+            list-style: none;
+        }
+        #header-options li{
+            display: inline-block;
+            padding:5px 25px;
+            font-weight: 200;
+        }
+        #header-options li:last-child{
+            padding: 0;
+        }
+        .last button{
+            padding: 20px 35px;
+            background: transparent;
+            border: 1px solid #0dd4d4;
+            color: #0dd4d4;
+            transition-duration: .8s;
+        }
+        .last button:hover{
+            background-color: #0dd4d4;
+            color: white;
+        }
+        .main-container{
+            height: calc(100vh - 110px);
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        .btn-details{
+            padding: 20px 35px;
+            background: #0dd4d4;
+            border: 1px solid #0dd4d4;
+            color: white;
+            transition-duration: .8s;
+            font-weight: 100;
+            font-size: 24px;
+            letter-spacing: 3px;
+        }
+        .btn-details span{
+            font-size: 25px;
+            font-weight: 200;
+            letter-spacing: 3px;
+        }
+        .btn-details:hover{
+            background: transparent;
+        }
+        .sub-container{
+            height: 300px;
+            text-align: center;
+        }
+        .sub-container h1{
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            word-spacing: 6px;
+        }
+        .sub-container h3{
+            font-weight: 100;
+            letter-spacing: 3px;
+            margin-bottom: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-brand-log">
+            <h3 id="brand-logo">Logo</h3>
+        </div>
+        <div class="container-menu">
+            <ul id="header-options">
+                <li>Home</li>
+                <li>Listings</li>
+                <li>Locations</li>
+                <li>Pages</li>
+                <li class="last"><button>Register</button></li>
+            </ul>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="sub-container">
+            <h1>The White Swan</h1>
+            <h3>New Jersey / Paterson</h3>
+            <a class="btn-details">
+                View Detail
+            </a>
+        </div>
+    </div>
+</body>
+</html>
