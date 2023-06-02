@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day - 6</title>
+    <style>
+        .input{
+            width: 300px;
+            height: 20px;
+            color: grey;
+            background: #fff;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            transition-duration: 2s;
+            text-indent: 10px;
+        }
+        .pseudo:after{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background: black;
+            border-radius: 50px;
+            top: 0;
+            right: 0;
+        }
+        .input:focus{
+            transform: scale(1.5);
+            border-radius: 20px;
+        }
+        .btn{
+            height: 60px;
+            width: 200px;
+            background: black;
+            color: white;
+            padding: 20px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            transition-duration: .8s;
+            top: 300px;
+            left: 300px;
+        }
+        .btn:hover{
+            background:white;
+            color: black;
+        }
+        div.container{
+            height: 800px;
+            background-color: aquamarine;
+            position: relative;
+        }
+        .size{
+            height: 300px;
+            width: 200px;
+            background-color: grey;
+            border: 1px solid white;
+            display: inline-block;
+            top: 300px;
+            left: 300px;
+        }
+        .relative{
+            position: relative;
+        }
+        .absolute{
+            position: absolute;
+        }
+        .sticky{
+            position: sticky;
+        }
+        .fixed{
+            position: fixed;
+        }
+        .static{
+            position: static;
+        }
+
+        .calc{
+            width: calc(100% - 30px);
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pseudo">
+        <input type="text" class="input">
+        <button class="btn"> My button</button>
+    </div>
+
+    <div class="container">
+        <!-- <div class="size relative">relative</div>
+        <!-- <div class="size relative">relative</div>
+        <div class="size absolute">absolute</div> -->
+        <div class="size absolute">relative1</div>
+        <div class="size absolute">relative2</div>
+        <!-- <div class="size sticky">sticky</div> -->
+        <!-- <div class="size fixed">fixed</div> -->
+        <!-- <div class="size static">static</div> -->
+    </div>
+
+    <div class="calc">
+
+    </div>
+    
+</body>
+</html>
