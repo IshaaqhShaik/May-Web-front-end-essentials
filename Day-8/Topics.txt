@@ -1,0 +1,9 @@
+Todays topics:
+    Revision:
+    
+    Developer Tools
+
+    Debugging in JS
+
+    Loops:
+        While loop and For Loop
