@@ -1,0 +1,29 @@
+Day:7
+    ECMA script:
+    Datatypes
+        primitive data types:
+            Number quantity ( 0 - 10 ^ 13) 
+            BigInt big numbers(Integer 0 - 10 ^26)
+            String words or collection of ascii 
+            Boolean (logical type) (Yes or no)
+
+            The “null” value
+            The “undefined” value
+            Objects and Symbols
+            The typeof operator
+        non-primitive data types:
+            objects
+            arrays
+
+    Interactions
+        alert
+        prompt
+        confirm
+
+    Variable Declarations
+        variable hoisting
+    Variable definition
+        let, const, var.
+
+    Conditional Statements
+        if, elseif, else, switch and terinary operator.
