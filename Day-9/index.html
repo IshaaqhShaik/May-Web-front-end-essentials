@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day - 9</title>
+</head>
+<body>
+    <label for="" class="label">
+
+    </label>
+
+    
+    <span class="select">
+        not selected
+    </span>
+    <span class="select">
+        not selected
+    </span>
+
+    <label for="" class="label">
+        <span class="select">
+            //TODO:need to select this
+        </span>
+    </label>
+    
+    <label for="" class="label">
+
+    </label>
+    
+    <label for="" class="label">
+
+    </label>
+    <script>
+        // var element2 = document.getElementsByClassName('class')[0];
+        // element2.innerText = "Hello World!";
+        // sarfarz and haseeb:
+        document.querySelector("label.label > span.select").innerText = "selected";
+        console.log(window)
+        window.addEventListener("focus", function(){
+            console.log("focussed");
+        })
+        window.addEventListener("blur", function(){
+            console.log("blurred");
+        })
+    </script>
+
+</body>
+</html>

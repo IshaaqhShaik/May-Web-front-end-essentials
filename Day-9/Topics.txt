@@ -1,0 +1,13 @@
+Topics: 07/06/2023
+
+    Query Selectors
+    
+    Dom Iteration
+
+    Document Window
+
+    Assignment:
+
+    create a input field with ID #demo
+
+    

@@ -8,7 +8,11 @@
 </head>
 <body>
     <h1 align="center">Day - 8</h1>
-    
+    <div id="container4"></div>
+    <div id="container3"></div>
+    <div id="container2"></div>
+    <div id="container1"></div>
+    <div id="container0"></div>
     <script>
         window.onload = function(){
             // var count = 0;
@@ -22,22 +26,45 @@
             //     count = count + 1;
             // }
 
-            for(var i = 1; i <= 5; i++){
-                var nums = "";
-                debugger;
-                for(var j = 1; j <= i; j++){
-                    nums = nums + " "+ j;
-                }
-                console.log(nums);
-            }
-            for(var i = 4; i >= 1; i--){
-                var nums = ""
-                for(var j = 1; j <= i; j++){
-                    nums = nums + " "+ j;
-                }
-                console.log(nums);
-            }
+            // for(var start = 0; start <= 100; start++){
+            //     console.log(start);
+            // }
+            
+            // for(var i = 1; i <= 5; i++){
+            //     var nums = "";
+            //     for(var j = 1; j <= i; j++){
+            //         nums = nums + " "+ j;
+            //     }
+            //     console.log(nums);
+            // }
+
+            // for(var i = 4; i >= 1; i--){
+            //     var nums = ""
+            //     for(var j = 1; j <= i; j++){
+            //         nums = nums + " "+ j;
+            //     }
+            //     console.log(nums);
+            // }
         }
+
+            for(var i = 4; i >= 0; i--){
+                var length = 9;
+                var characters = "";
+                for(var j = i; j > 0;j--){
+                    characters += "&nbsp;&nbsp;";
+                }
+                var stars_count = length - (2 * i);
+                for(var k = stars_count; k > 0; k--){
+                    characters += "*"
+                }
+                for(var j = i; j > 0;j--){
+                    characters += " ";
+                }
+                // console.log(characters);
+                var element = document.getElementById('container'+i);
+                element.innerHTML = characters;
+
+            }
     </script>
 </body>
 </html>
