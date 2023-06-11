@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: 'Times New Roman', Times, serif; color: black">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<Style>
+    html{
+        scroll-behavior: smooth;
+    }
+    .container {
+        margin-left: 100px;
+    }
+
+    .container button {
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 15px 0;
+        color: black;
+        background-color: #f0f4f0;
+        border: 1px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:active{
+        background-color: white;
+        color: black;
+        border: 1px solid gray;
+
+    }
+    .container input[type="text"] {
+        padding: 8px 10px;
+        margin: 0px 0px 20px 0px;
+        border: 2px solid grey;
+        color: black;
+        border-radius: 5px;
+        background-color: rgb(245, 244, 244);
+        transition-delay: .5s;
+        transition-duration: .8s;
+    }
+    .container input[type="text"]::placeholder {
+        color: black;
+    }
+    .container input:focus{
+        transform: scale(1.2);
+    }
+
+</Style>
+
+<body style="max-width: 600px; margin: 0 auto; padding: 0 15px">
+    <div class="container">
+        <h1>Accessing Elements in the DOM
+        </h1>
+        <Form>
+            <label>
+                <h1>ID (#demo)</h1>
+            </label>
+            <input type="text" id="demo" placeholder="Access me by Id" size="50">
+            <label>
+                <h1>Class (.demo)</h1>
+            </label>
+            <input type="text" class="demo" placeholder="Access me by class(1)" size="50"><br>
+            <input type="text" class="demo" placeholder="Access me by class(2)" size="50">
+            <label>
+                <h1>Tag(article)</h1>
+            </label>
+            <article style="border: 2px solid black;margin: 5px;">Access me by tag (1)</article>
+            <article style="border: 2px solid black; margin:5px;">Access me by tag (2)</article>
+            <label>
+                <h1>Query Selector</h1>
+            </label>
+            <input id="demo-query" type="text" class="query_input" placeholder="Access me by Query" size="50">
+            <label>
+                <h1>Query Select All</h1>
+            </label>
+            <input class="demo-query-all" type="text" placeholder="Access me by Query all(1)" size="50"><br>
+            <input class="demo-query-all" type="text" placeholder="Access me by Query all(2)" size="50">
+        </Form>
+        <button type=button onclick="alert('clicked')" id="id_button" >ID</button>
+        <button type=button onclick="alert('clicked')" id="button2">Class</button>
+        <button type=button onclick="alert('clicked')" id="button3">Tag</button>
+        <button type=button onclick="alert('clicked')" id="button4">Query Selector</button>
+        <button type=button onclick="alert('clicked')" id="button5">Query Select All</button>
+    </div>
+    <script>
+        var id_button = document.getElementById('id_button');
+        id_button.addEventListener('click', function(){
+          var demoId = document.getElementById('demo');
+          demoId.style.border = '3px solid purple';
+        })
+
+        var class_button = document.getElementById('button2');
+        class_button.addEventListener('click', function(){
+            var demoClass = document.getElementsByClassName('demo');
+            for (i = 0; i < demoClass.length; i++) {
+             demoClass[i].style.border = '3px solid orange';
+        }
+        })
+
+        var tag_button = document.getElementById('button3');
+        tag_button.addEventListener('click', function(){
+            const demoTag = document.getElementsByTagName('article');
+            console.log(demoTag);
+            for (i = 0; i < demoTag.length; i++) {
+             demoTag[i].style.border = '3px solid blue';
+           }
+        })
+
+        var query_button = document.getElementById('button4');
+        query_button.addEventListener('click', function(){
+        const demoQuery = document.querySelector('#demo-query');
+        console.log(demoQuery);
+        demoQuery.style.border = '3px solid red';
+        })
+
+        var querys = document.getElementById('button5');
+        querys.addEventListener('click', function(){
+        const demoQueryAll = document.querySelectorAll('.demo-query-all');
+        demoQueryAll.forEach(query => {
+        query.style.border = '3px solid green';
+});
+        })
+
+
+    </script>
+</body>
+
+</html>
