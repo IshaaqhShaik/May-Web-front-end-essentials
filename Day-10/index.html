@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container-gp{
+            height: 500px;
+            width: 500px;
+            background-color: red;
+        }
+        .container-p{
+            height: 250px;
+            width: 250px;
+            background-color: green;
+        }
+        .container-c{
+            height: 150px;
+            width: 150px;
+            background-color: blue;
+        }
+        #sibling{
+            height: 150px;
+            width: 150px;
+            background-color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+
+
+<h2>HTML Forms</h2>
+
+<form action="#">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+    <div class="cotainer container-gp" id="gp">
+        <div class="cotainer container-p" id="p">
+            <div class="cotainer container-c" id="c"></div>
+        </div>
+    </div>
+    <div id="sibling">
+
+    </div>
+<script>
+
+    c sibling p gp documnet window 
+
+    // var form = document.querySelector('form input');
+    // form.addEventListener('focus', function(){
+        //     console.log("focussed");
+        // })
+        
+        // var form = document.querySelector('form');
+        // form.addEventListener('submit', function(){
+            //     alert("submitted");
+            // })
+            
+            // document.addEventListener('keydown', function(){
+                //         alert("key down")
+                //     })
+                
+                // var form = document.querySelector('form input');
+                // form.addEventListener('keyup', function(){
+                    //     console.log("keyup"); // h1 f1 s2
+                    // })
+                    // var form = document.querySelector('form input');
+                    // form.addEventListener('keydown', function(){
+                        //     console.log("keydown"); // s1 h2 f2
+                        // })
+                        // document.addEventListener('click', function(){
+                            //      console.log("click");
+                            //  })
+                            // document.addEventListener('contextmenu', function(){
+                                //      console.log("contextmenu");
+                                //  })
+                                //  document.addEventListener('mouseup', function(){
+                                    //       console.log("mouseup");
+                                    //   })
+                                    //  document.addEventListener('mousedown', function(){
+                                        //       console.log("mousedown");
+                                        //   })
+                                        //  document.addEventListener('click', function(){
+                                            //       console.log("click");
+                                            //   })
+                                            //  document.addEventListener('mousemove', function(){
+                                                //       console.log("mousemove");
+                                                //   })
+                                                
+                                                
+                                                
+                                                
+                                                </script>
+
+                                                <script>
+                                                    // var sample1 = function(){
+                                                    //     debugger; // f4 h2 s3
+                                                    // }
+                                                    // var sample2 = function(){
+                                                    //     debugger; //f2 h4 s2
+                                                    // }
+                                                    // document.addEventListener("DOMContentLoaded", function(){
+                                                    //     sample1();
+                                                    //     debugger; // f5 h3 s5
+                                                    // });
+                                                    // window.addEventListener("load", function(){
+                                                    //     sample2();
+                                                    //     debugger; //f3 h5 s4
+                                                    // })
+                                                    // debugger; // h1 f1  s1
+                                                    var elementgp = document.getElementById('gp');
+                                                    var elementp = document.getElementById('p');
+                                                    var elementc = document.getElementById('c');
+                                                    var element = document.getElementById('sibling');
+                                            
+                                                    elementgp.addEventListener('click', function(){
+                                                        alert("gp");
+                                                    })
+                                                    elementp.addEventListener('click', function(){
+                                                        alert("p");
+                                                    })
+                                                    elementc.addEventListener('click', function(event){
+                                                        alert("c");
+                                                    })
+                                                    element.addEventListener('click', function(){
+                                                        alert("sibling");
+                                                    })
+                                                    document.addEventListener('click', function(event){
+                                                        event.stopPropagation();
+                                                        alert("document");
+                                                    })
+                                                    window.addEventListener('click', function(){
+                                                        alert("window");
+                                                    })
+                                            
+                                                </script>
+</body>
+</html>

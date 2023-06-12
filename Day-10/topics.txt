@@ -1,0 +1,16 @@
+
+Browser Events:
+    document events: trigger this event when all document is loaded
+        DOMContentLoaded
+    form events:
+        submit, focus
+    Keyboard events:
+        keyup, keydown
+    Mouse Events:
+        (click, contextmenu, mouseover, mouseout, , mousedown, mouseup, mousemove)
+    css:
+        transitioned () 
+Event Bubbling:
+
+Event Capturing
+Event delegation
