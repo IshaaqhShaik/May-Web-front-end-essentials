@@ -1,0 +1,10 @@
+Topics: 12/06/2023
+    Exception Handling:
+        default errors,
+        custom errors.
+
+    XmlHttpRequests:
+        xhr basic syntax
+
+    setTimeout
+    setInterval

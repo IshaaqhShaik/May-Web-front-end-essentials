@@ -5,7 +5,7 @@ Browser Events:
     form events:
         submit, focus
     Keyboard events:
-        keyup, keydown
+        keyup, keydown, keypress.
     Mouse Events:
         (click, contextmenu, mouseover, mouseout, , mousedown, mouseup, mousemove)
     css:

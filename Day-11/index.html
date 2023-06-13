@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="paragraph"> this is a paragraph</p>
+    <lable id="label">this is a lable</lable>
+
+    <script>
+        class Error {
+            constructor(message) {
+                this.message = message;
+                this.name = "Error"; // (different names for different built-in error classes)
+            }
+        }
+        class NullEventError extends Error {
+            constructor(message) {
+                super(message); // (1)
+                this.name = "NullEventError"; // (2)
+            }
+        }
+        class DefaultError extends Error {
+            constructor(message) {
+                super(message); // (1)
+                this.name = "defaultError"; // (2)
+            }
+        }
+        try {
+            var label = document.getElementById('labe');
+            if(label){
+                label.addEventListener('click', function () {
+                    alert('NullEventException');
+                })
+            }else if(label != null){
+                throw new NullEventError("trying to add event to null element");
+            } else{
+                throw new DefaultError("this is a default error");
+            }
+        } catch (err) {
+            var label = document.getElementById('label');
+            label.addEventListener('click', function () {
+                alert("something wrong with your event listener");
+            })
+            alert(err.name);
+        }
+
+        var paragraph = document.getElementById('paragraph');
+
+        paragraph.addEventListener('click', function () {
+            alert("clicked")
+        })
+
+        // excepion handling
+        function showMessage(){
+            console.log("showing message");
+        }
+        myInterval = setInterval(showMessage, 1000);
+
+        //let xhr = new XMLHttpRequest();
+        //xhr.open(method, URL, [async, username, password]);
+        //xhr.send
+    </script>
+</body>
+
+</html>
