@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>
+            <legend>Registration form</legend>
+        </h1>
+        <form>
+            <h3><Label>Firstname</Label><br></h3>
+            <input type="text" placeholder="firstname" size="30"><br><br>
+            <h3><label>Lastname</label><br></h3>
+            <input type="text" placeholder="Lastname" size="30"><br><br>
+            <h3><label>Email</label><br></h3>
+            <input type="email" placeholder="Email" size="30"><br><br>
+            <h3><label>password</label><br></h3>
+            <input type="password" placeholder="password" size="30"><br><br>
+            <h3><label>Confirm password</label><br></h3>
+            <input type="password" placeholder="Confirm password" size="30"><br><br>
+            <h3><label>Phone</label></h3>
+            <input type="text" name="country code" value="+91" size="2" />
+            <input type="text" name="phone" size="10" /> <br> <br>
+            <h3><Label>Enter your Gender</Label><br> </h3>
+            <input type="radio" name="drone" checked>Male<br>
+            <input type="radio" name="drone">Female<br>
+            <input type="radio" name="drone">Others<br><br>
+
+        </form>
+    </div>
+
+    <input type="file" onchange="upload(this.files[0])">
+    <progress id="file" value="0" max="100"> 32% </progress><br>
+    <button id="button" onclick="download()">download </button>
+    <progress id="farooq" value="0" max="100">0%</progress>
+
+    <script>
+        function upload(file) {
+            let xhr = new XMLHttpRequest();
+
+
+            // track upload progress
+            xhr.upload.onprogress = function (event) {
+                var file = document.getElementById("file");
+                var percentage = (event.loaded / event.total) * 100;
+                file.setAttribute("value", percentage);
+                console.log(`Uploaded ${event.loaded} of ${event.total}`);
+            };
+
+            // track completion: both successful or not
+            xhr.onloadend = function () {
+                if (xhr.status == 200) {
+                    console.log("success");
+                } else {
+                    console.log("error " + this.status);
+                }
+            };
+
+            xhr.open("POST", "/article/xmlhttprequest/post/upload");
+            xhr.send(file);
+
+        }
+        function download() {
+            // created the new xhr: brought a post card 
+            let downloadXhr = new XMLHttpRequest();
+            var file = document.getElementById("farooq");
+            // configure xhr details: from to address location 
+            // downloadXhr.open("GET","https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip");
+            downloadXhr.open("GET", "https://filesamples.com/samples/video/mp4/sample_1280x720_surfing_with_audio.mp4");
+            downloadXhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+            downloadXhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, DELETE, OPTIONS');
+            downloadXhr.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+            downloadXhr.onprogress = function (event) {
+                var percentage = (event.loaded / event.total) * 100;
+                file.setAttribute("value", percentage);
+                console.log(`Uploaded ${event.loaded} of ${event.total}`);
+            };
+            downloadXhr.send();
+
+
+
+        }
+    </script>
+</body>
+
+</html>
