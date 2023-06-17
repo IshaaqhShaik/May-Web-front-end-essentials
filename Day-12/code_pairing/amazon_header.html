@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Header</title>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
+        body{
+            margin: 0;
+        }
+        header .first_line{
+            background-color: #131921;
+            padding: 10px 20px;
+        }
+        .brand_image{
+            height: 35px;
+            width: 110px;
+            background-image: url("https://www.citypng.com/public/uploads/preview/-11596409153ixy8eolhxq.png");
+            background-size: cover;
+        }
+        .inline{
+            display: inline-block;
+        }
+        .glyphicon-map-marker{
+            position: absolute;
+            top: 25px;
+            left: -20px;
+        }
+        .first_1{
+            margin-right: 30px;
+        }
+        .first-1-2{
+            margin-left: 36px;
+            color: white;
+            position: relative;
+        }
+        #categories{
+            margin-right: 0;
+            border-right: 0;
+            padding: 15px 20px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border: 0px;
+        }
+        button#categories:after {
+            content: '';
+            position: absolute;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid black;
+            transform: rotate(0deg) translate(5px, 7px);
+        }   
+        #search_btn{
+            margin-left: 0;
+            border-left: 0;
+            padding: 15px 20px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border: 0px;
+            background-color: orange;
+            transform: translate(-6px, 0px);
+        }
+        #search_bar{
+            width: 583px;
+            height: 50px;
+            border: 0px;
+            margin: 0;
+            transform: translate(-3px, 0px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="first_line">
+            <div class="inline first_1">
+                <div class="inline brand_image">
+                </div>
+                <div class="inline first-1-2">
+                    <span class="glyphicon glyphicon-map-marker"></span>
+                    <div class="location_info">
+                        <label>Deliver to Shaik</label><br>
+                        <label><strong>Madanapalle 517325</strong></label>
+                    </div>
+                </div>
+            </div>
+            <div class="inline first_2">
+                <button id="categories">All</button>
+                <input id="search_bar" placeholder="Search Amazon.in">
+                <button id="search_btn">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </div>
+            <div class="inline first_3">
+
+            </div>
+        </div>
+    </header>
+</body>
+</html>

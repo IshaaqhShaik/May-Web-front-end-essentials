@@ -1,0 +1,12 @@
+Day-12 : 14/06/2023(1.5 hours)
+(60 mins)        
+    objects and literals.
+    pass by reference and pass by value.
+    object references and deep cloning.
+    garbage collection.
+    object methods.
+(30 mins)
+    amazon header code pairing.
+
+
+

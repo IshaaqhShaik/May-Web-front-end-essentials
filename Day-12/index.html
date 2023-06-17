@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day:12 Objects</title>
+</head>
+
+<body>
+    <h1 align="center">Day:12 Objects</h1>
+    <script>
+        // function initaliseNamme() {
+        //     var username;
+        //     console.log(username);
+        //     username = "ishaaqh";
+        // }
+        // initaliseNamme();
+    </script>
+    <script>
+        // normal initialisation 
+        //  let user = new Object();
+        // literal
+        let user = {     // an object
+            name: "John",  // by key "name" store value "John"
+            age: 30,
+            isAdmin: true,
+            'mohammed ishaaqh': "brother"    // by key "age" store value 30
+        };
+        let one = Symbol('1');
+        let two = Symbol('1');
+
+        console.log(one == two);
+
+        let students = {
+            haseeb: {
+                name: "student 1",
+                age: 30,
+                isAdmin: true
+            },
+            sharfaraz: {
+                name: "student 3",
+                age: 30,
+                isAdmin: true
+            },
+            sharfaraz1: {
+                name: "student 3",
+                age: 30,
+                isAdmin: true
+            }
+        }
+        for(let key in students){
+            if(key == 'haseeb'){
+                console.log(students[key]);
+            }
+        }
+        // console.log(students['1'].name);
+
+        // let fruit = prompt("Which fruit to buy?", "apple");
+        // let username = "ishaaqh"
+        // let bag = {
+        //     username // the name of the property is taken from the variable fruit
+        // };
+
+        
+        let haseeb = {
+            name: "Haseeb123",  // by key "name" store value "John"
+            age: 23,
+            greeting: function(){
+                console.log("Hello "+ this.name)
+            },
+        }
+        // delete haseeb.isAdmin;
+        // console.log("isAdmin" in haseeb);
+
+        let users = {
+            haseeb
+        };
+        // pass by value
+
+        let haseeb1 = "ishaaqh";
+        let sarfaraz = haseeb1;
+        sarfaraz = "mohammed"
+
+        // pass by reference
+        
+        users.haseeb.greeting();
+        debugger;
+        // 'name': 'John'
+        // console.log(user.name);
+        // delete user.isAdmin;
+        // console.log(user.isAdmin);
+        //  console.log(user['mohammed ishaaqh']);
+    </script>
+</body>
+
+</html>
