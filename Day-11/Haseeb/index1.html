@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add to Cart</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <style>
+    /* Add to Cart page styles */
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .product {
+      margin-bottom: 20px;
+    }
+
+    .product h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .product p {
+      color: #777;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    // AngularJS code
+    angular.module('AddToCartApp', [])
+      .controller('AddToCartController', function($scope) {
+        // Cart items
+        $scope.cart = [];
+
+        // Products
+        $scope.products = [
+          {
+            id: 1,
+            name: 'Product 1',
+            price: 10.99
+          },
+          {
+            id: 2,
+            name: 'Product 2',
+            price: 15.99
+          },
+          {
+            id: 3,
+            name: 'Product 3',
+            price: 20.99
+          }
+        ];
+
+        // Add to cart function
+        $scope.addToCart = function(product) {
+          // Check if product is already in cart
+          var item = $scope.cart.find(function(item) {
+            return item.product.id === product.id;
+          });
+
+          if (item) {
+            // If product is already in cart, increase the quantity
+            item.quantity++;
+          } else {
+            // Otherwise, add new item to cart
+            $scope.cart.push({
+              product: product,
+              quantity: 1
+            });
+          }
+        };
+
+        // Remove from cart function
+        $scope.removeFromCart = function(item) {
+          var index = $scope.cart.indexOf(item);
+          if (index !== -1) {
+            $scope.cart.splice(index, 1);
+          }
+        };
+      });
+  </script>
+</head>
+<body ng-app="AddToCartApp" ng-controller="AddToCartController">
+  <div class="container">
+    <h2>Add to Cart</h2>
+
+    <div class="product" ng-repeat="product in products">
+      <h3>{{ product.name }}</h3>
+      <p>Price: ${{ product.price }}</p>
+      <button class="btn" ng-click="addToCart(product)">Add to Cart</button>
+    </div>
+
+    <h3>Cart</h3>
+    <div class="product" ng-repeat="item in cart">
+      <h3>{{ item.product.name }}</h3>
+      <p>Price: ${{ item.product.price }}</p>
+      <p>Quantity: {{ item.quantity }}</p>
+      <button class="btn" ng-click="removeFromCart(item)">Remove</button>
+    </div>
+  </div>
+</body>
+</html>
